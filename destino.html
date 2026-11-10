@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonho de viagem – Suíça | Pedro</title>
+<meta name="description" content="Por que o Pedro quer conhecer a Suíça: montanhas, lagos e cidades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5FF; --surface:#FFFFFF; --ink:#12163A; --muted:#555C85;
+  --blue:#3346F0; --amber:#C9740A; --line:#D9DDF3; --hero:#12163A; --hero-ink:#F3F5FF;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Figtree","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C0F29; --surface:#161B42; --ink:#EEF0FF; --muted:#A3AAD3;
+    --blue:#8D9BFF; --amber:#FFB547; --line:#2A3060; --hero:#080A1E; --hero-ink:#EEF0FF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C0F29; --surface:#161B42; --ink:#EEF0FF; --muted:#A3AAD3;
+  --blue:#8D9BFF; --amber:#FFB547; --line:#2A3060; --hero:#080A1E; --hero-ink:#EEF0FF;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header.top{background:var(--hero);color:var(--hero-ink)}
+nav{display:flex;gap:1.25rem;align-items:center;padding:1rem 0;flex-wrap:wrap}
+nav a{color:var(--hero-ink);text-decoration:none;opacity:.8;font-weight:500}
+nav a:hover{opacity:1;text-decoration:underline}
+nav a[aria-current="page"]{opacity:1;border-bottom:2px solid var(--amber)}
+nav button{margin-left:auto;background:transparent;color:var(--hero-ink);border:1px solid #ffffff55;border-radius:999px;padding:.35rem .9rem;font:inherit;cursor:pointer}
+nav button:hover{background:#ffffff1a}
+.hero{padding:2.5rem 0 3.5rem}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,5.2rem);line-height:1;letter-spacing:-.03em;max-width:14ch}
+.hero p{max-width:34rem;margin-top:1.1rem;font-size:1.2rem;opacity:.9}
+.photo{margin:-2rem auto 0;position:relative}
+.photo img{width:100%;height:auto;display:block;border-radius:18px;border:1px solid var(--line);aspect-ratio:16/9;object-fit:cover;background:#1c2150}
+.photo figcaption{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.two{display:grid;gap:1.5rem 3rem}
+@media(min-width:760px){.two{grid-template-columns:14rem 1fr}}
+.prose{max-width:40rem}
+.places{list-style:none;padding:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+.places li{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:6px 6px 14px 14px;padding:1.1rem 1.25rem}
+.places li:nth-child(2){border-top-color:var(--amber)}
+.places strong{display:block;font-family:var(--display);font-size:1.35rem}
+.places span{color:var(--muted);font-size:.98rem}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;margin-top:1rem}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-weight:500}
+.back{display:block;text-align:center;background:var(--blue);color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,3.5vw,1.8rem);padding:1.8rem 1rem;border-radius:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .back{color:#0C0F29}}
+:root[data-theme="dark"] .back{color:#0C0F29}
+.back:hover{filter:brightness(1.1)}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="destino.html" aria-current="page">Sonho de viagem</a>
+      <button id="tema" type="button" aria-label="Alternar tema claro e escuro">Tema</button>
+    </nav>
+    <div class="hero">
+      <h1>Meu sonho de viagem</h1>
+      <p>Montanhas, lagos e cidades de cartão-postal: a Suíça é o lugar que mais quero conhecer.</p>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <figure class="photo">
+    <img src="suica.jpg" alt="Paisagem da Suíça com montanhas e lago" width="1200" height="675">
+    <figcaption>Paisagem da Suíça.</figcaption>
+  </figure>
+  <section class="two">
+    <h2>Por que a Suíça?</h2>
+    <p class="prose">Acho as paisagens incríveis, principalmente as montanhas, os lagos e as cidades. Quero conhecer esse lugar pessoalmente e viver essa experiência.</p>
+  </section>
+  <section class="two">
+    <h2>Lugares que quero conhecer</h2>
+    <ul class="places">
+      <li><strong>Interlaken</strong><span>Cidade entre dois lagos, cercada por montanhas.</span></li>
+      <li><strong>Zermatt</strong><span>Vila aos pés da famosa montanha Matterhorn.</span></li>
+      <li><strong>Lucerna</strong><span>Cidade à beira do lago, com centro histórico.</span></li>
+    </ul>
+  </section>
+  <section class="two">
+    <h2>Um pouco sobre a Suíça</h2>
+    <div>
+      <p class="prose">A Suíça fica na Europa e é conhecida pelas paisagens naturais, pelas montanhas, pelos lagos e pelas cidades muito bonitas.</p>
+      <ul class="facts"><li>Montanhas</li><li>Lagos</li><li>Chocolates</li><li>Relógios</li></ul>
+    </div>
+  </section>
+  <section>
+    <a class="back" href="index.html">Voltar para a página inicial</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">Feito por Pedro, aprendendo HTML e CSS.</div>
+</footer>
+<script>
+(function(){
+  var b=document.getElementById('tema'),r=document.documentElement;
+  try{var s=localStorage.getItem('tema');if(s)r.setAttribute('data-theme',s)}catch(e){}
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    var n=dark?'light':'dark';
+    r.setAttribute('data-theme',n);
+    try{localStorage.setItem('tema',n)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

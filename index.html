@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro – Sobre mim</title>
+<meta name="description" content="Site pessoal do Pedro: tecnologia, jogos, viagens e estudos em Informática para Internet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5FF; --surface:#FFFFFF; --ink:#12163A; --muted:#555C85;
+  --blue:#3346F0; --amber:#C9740A; --line:#D9DDF3; --hero:#12163A; --hero-ink:#F3F5FF;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Figtree","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C0F29; --surface:#161B42; --ink:#EEF0FF; --muted:#A3AAD3;
+    --blue:#8D9BFF; --amber:#FFB547; --line:#2A3060; --hero:#080A1E; --hero-ink:#EEF0FF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C0F29; --surface:#161B42; --ink:#EEF0FF; --muted:#A3AAD3;
+  --blue:#8D9BFF; --amber:#FFB547; --line:#2A3060; --hero:#080A1E; --hero-ink:#EEF0FF;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+/* topo */
+header.top{background:var(--hero);color:var(--hero-ink)}
+nav{display:flex;gap:1.25rem;align-items:center;padding:1rem 0;flex-wrap:wrap}
+nav a{color:var(--hero-ink);text-decoration:none;opacity:.8;font-weight:500}
+nav a:hover{opacity:1;text-decoration:underline}
+nav button{margin-left:auto;background:transparent;color:var(--hero-ink);border:1px solid #ffffff55;border-radius:999px;padding:.35rem .9rem;font:inherit;cursor:pointer}
+nav button:hover{background:#ffffff1a}
+
+.hero{display:grid;gap:2rem;padding:3rem 0 4rem;align-items:center}
+@media(min-width:760px){.hero{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,11vw,7rem);line-height:.95;letter-spacing:-.03em}
+.hero p{max-width:34rem;margin-top:1.25rem;font-size:1.2rem;opacity:.9}
+.hero .cta{display:inline-block;margin-top:1.75rem;background:var(--amber);color:#1b1200;font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:10px}
+.hero .cta:hover{filter:brightness(1.08)}
+.hero figure img{width:100%;height:auto;display:block;border-radius:18px;border:1px solid #ffffff2a;aspect-ratio:4/3;object-fit:cover;background:#1c2150}
+.hero figcaption{font-size:.9rem;opacity:.7;margin-top:.5rem}
+
+/* seções */
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.two{display:grid;gap:1.5rem 3rem}
+@media(min-width:760px){.two{grid-template-columns:14rem 1fr}}
+.prose{max-width:40rem}
+
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-weight:500}
+
+.games{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));max-width:40rem}
+.games div{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:6px 14px 14px 6px;padding:1rem 1.25rem;font-family:var(--display);font-weight:600;font-size:1.3rem}
+.games div:nth-child(2){border-left-color:var(--amber)}
+
+.goals{list-style:none;padding:0;display:grid;gap:.9rem;max-width:40rem}
+.goals li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.25rem}
+.goals strong{display:block;font-family:var(--display);font-size:1.15rem}
+
+.spec{background:var(--hero);color:var(--hero-ink);border-radius:18px;padding:2rem;max-width:40rem}
+.spec h2{margin-bottom:.5rem}
+.spec p{opacity:.9}
+
+.travel{display:block;text-align:center;background:var(--blue);color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,4vw,2.2rem);padding:2.5rem 1rem;border-radius:20px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .travel{color:#0C0F29}}
+:root[data-theme="dark"] .travel{color:#0C0F29}
+.travel:hover{filter:brightness(1.1)}
+.travel small{display:block;font-family:var(--body);font-weight:500;font-size:1rem;margin-top:.4rem;opacity:.9}
+
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a href="#quem-sou">Quem sou</a>
+      <a href="#interesses">Interesses</a>
+      <a href="#estudos">Estudos</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="destino.html">Sonho de viagem</a>
+      <button id="tema" type="button" aria-label="Alternar tema claro e escuro">Tema</button>
+    </nav>
+    <div class="hero">
+      <div>
+        <h1>Pedro</h1>
+        <p>Curioso por natureza e apaixonado por tecnologia. Aqui você conhece o que eu curto, o que estou estudando e onde quero chegar.</p>
+        <a class="cta" href="#quem-sou">Conhecer meu mundo</a>
+      </div>
+      <figure>
+        <img src="setup.jpg" alt="Meu setup gamer" width="800" height="600">
+        <figcaption>Meu setup gamer.</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="quem-sou" class="two">
+    <h2>Quem sou eu?</h2>
+    <p class="prose">Sou uma pessoa curiosa que gosta de aprender coisas novas. Adoro viajar com a minha família e tenho muito interesse pelo mundo da tecnologia.</p>
+  </section>
+
+  <section id="interesses" class="two">
+    <h2>Meus interesses</h2>
+    <ul class="chips">
+      <li>Jogos</li><li>Tecnologia</li><li>Viagens</li>
+      <li>Computadores</li><li>Filmes</li><li>Estudar</li>
+    </ul>
+  </section>
+
+  <section id="estudos" class="two">
+    <h2>Meus estudos</h2>
+    <p class="prose">Estudo Informática para Internet em uma ETEC. Estou aprendendo a usar o Visual Studio Code e estou gostando muito da experiência. Este site é um dos meus primeiros projetos.</p>
+  </section>
+
+  <section id="jogos" class="two">
+    <h2>Jogos favoritos</h2>
+    <div>
+      <p class="prose" style="margin-bottom:1rem">Gosto de jogar no computador. Meus favoritos:</p>
+      <div class="games"><div>Valorant</div><div>Fortnite</div></div>
+    </div>
+  </section>
+
+  <section id="objetivos" class="two">
+    <h2>Meus objetivos</h2>
+    <div>
+      <p class="prose" style="margin-bottom:1rem">No futuro, quero trabalhar em uma destas áreas:</p>
+      <ul class="goals">
+        <li><strong>Programação</strong>Criar sites, apps e sistemas.</li>
+        <li><strong>Cibersegurança</strong>Proteger pessoas e empresas na internet.</li>
+        <li><strong>Suporte técnico</strong>Resolver problemas e ajudar quem precisa.</li>
+      </ul>
+      <p class="prose" style="margin-top:1rem">Também sonho em trabalhar para empresas internacionais e morar fora do Brasil, construindo minha família em outro país.</p>
+    </div>
+  </section>
+
+  <section id="curiosidade">
+    <div class="spec">
+      <h2>Uma curiosidade sobre mim</h2>
+      <p>Adoro pesquisar peças de computador, comparar componentes e montar configurações de PC. Pode me chamar para falar disso por horas.</p>
+    </div>
+  </section>
+
+  <section>
+    <a class="travel" href="destino.html">Sonho de viagem<small>Veja para onde eu quero ir</small></a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Feito por Pedro, aprendendo HTML e CSS.</div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('tema'),r=document.documentElement;
+  try{var s=localStorage.getItem('tema');if(s)r.setAttribute('data-theme',s)}catch(e){}
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    var n=dark?'light':'dark';
+    r.setAttribute('data-theme',n);
+    try{localStorage.setItem('tema',n)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
